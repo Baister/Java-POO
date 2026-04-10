@@ -62,11 +62,4 @@ public abstract class Veiculo {
 
 //CARRO -> PORTAS -=- calcularDiaria -> se qtdePortas >= 4 acréscimo de 20%
 
-class Carro extends Veiculo{
-    private int quantidadePortas;
 
-    public Carro(String marca, String modelo, int ano, String placa, double precoBase, int quantidadePortas){
-        super(marca, modelo, ano, placa, precoBase);
-        this.quantidadePortas = quantidadePortas;
-    }
-}
