@@ -12,8 +12,9 @@ public class Locadora {
     }
 
     public void listarVeiculo(){
-        for (Veiculo v:frota){
-            System.out.println(v.toString());
+        for (int i = 0; i< frota.size(); i++){
+            Veiculo v = frota.get(i);
+            System.out.printf("");
         }
     }
     public void alugarVeiculo(String modelo){

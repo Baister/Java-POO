@@ -6,6 +6,9 @@ class Carro extends Veiculo{
         this.quantidadePortas = quantidadePortas;
     }
     @Override
+    public String toString(){
+        return super.toString() + " QUANTIDADE DE PORTAS: " + quantidadePortas;
+    }
     public double calcularDiaria() {
 
         if(quantidadePortas >= 4){
@@ -13,4 +16,5 @@ class Carro extends Veiculo{
         }
         return getPrecoBase();
     }
+
 }

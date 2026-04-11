@@ -55,7 +55,7 @@ public abstract class Veiculo {
     }
 
     public String toString(){
-        return marca + " " + modelo + " ("+ ano +") ";
+        return marca + " " + modelo + " ("+ ano +") "+ " PLACA:"+ placa + " PREÇO BASE: R$" + precoBase ;
     }
 }
 
