@@ -10,4 +10,17 @@ public class Locadora {
     public void adicionarVeiculo(Veiculo veiculo){
         frota.add(veiculo);
     }
+
+    public void listarVeiculo(){
+        for (Veiculo v:frota){
+            System.out.println(v.toString());
+        }
+    }
+    public void alugarVeiculo(String modelo){
+        for (Veiculo v:frota){
+            if(v.getModelo().equalsIgnoreCase(modelo)){
+                System.out.println(v.getModelo() + " -> ALUGADO!");
+            }
+        }
+    }
 }
