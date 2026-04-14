@@ -14,8 +14,9 @@ public class Locadora {
     public void listarVeiculo(){
         for (int i = 0; i< frota.size(); i++){
             Veiculo v = frota.get(i);
-            System.out.printf("");
+            System.out.printf("[%d] %s %s | Diária: R$%.2f\n", (i+1), v.getMarca(), v.getModelo(), v.getPlaca(), v.getPrecoBase());
         }
+        System.out.println("===========================================");
     }
     public void alugarVeiculo(String modelo){
         for (Veiculo v:frota){
@@ -23,6 +24,5 @@ public class Locadora {
                 System.out.println(v.getModelo() + " -> ALUGADO!");
             }
         }
-        System.out.println("===========================================");
     }
 }
