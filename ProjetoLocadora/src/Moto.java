@@ -13,7 +13,7 @@ public class Moto extends Veiculo{
         }
         return getPrecoBase();
     }
-
+    @Override
     public String toString(){
         return super.toString() + " CILINDRADAS: " + cilindrada;
     }
