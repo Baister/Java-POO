@@ -23,5 +23,6 @@ public class Locadora {
                 System.out.println(v.getModelo() + " -> ALUGADO!");
             }
         }
+        System.out.println("===========================================");
     }
 }
