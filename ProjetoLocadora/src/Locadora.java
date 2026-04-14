@@ -3,6 +3,10 @@ import java.util.List;
 public class Locadora {
     private List<Veiculo> frota;
 
+    public List<Veiculo> getFrota() {
+        return frota;
+    }
+
     public Locadora(){
         this.frota = new ArrayList<>();
     }
@@ -21,12 +25,15 @@ public class Locadora {
 
     public void aluguelVeiculo(int dias, int idVeiculo){
         //Logica para alugar o carro.
-        for(int i = 0; i < frota.size(); i++){
-            if(frota.indexOf(frota.get(i)) == idVeiculo){
-                System.out.println("Veiculo encontrado!");
-                System.out.println("Para o veiculo: " + frota.get(i).toString());
-                System.out.printf("Preco base: R$%.2f | Dias alugados: %s| Novo preco: R$%.2f", frota.get(i).calcularDiaria(), dias, frota.get(i).calcularDiaria() * dias);
-            }
+        try{
+            Veiculo v = frota.get(idVeiculo);
+            System.out.println("Veiculo encontrado!");
+            System.out.println("Para o veiculo: " + v.toString());
+            System.out.printf("Preco base: R$%.2f | Dias alugados: %s| Novo preco: R$%.2f", v.calcularDiaria(), dias, v.calcularDiaria() * dias);
+
+        }catch (IndexOutOfBoundsException e){
+            System.out.println("Veiculo nao encontrado!");
         }
+
     }
 }

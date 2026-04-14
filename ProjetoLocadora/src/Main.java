@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 //        Carro carro1 = new Carro("Ferrari", "PORTOFINO", 2026, "ghf-888", 10000, 4);
@@ -11,7 +13,16 @@ public class Main {
         locadora.adicionarVeiculo(new Moto("Harley-Davidson", "FATBOY", 2026, "png-666", 1000, 1600));
         locadora.listarVeiculo();
 
-        locadora.aluguelVeiculo(2, 0);
+        int tamanho = locadora.getFrota().size();
+
+        System.out.print("Escolha o veiculo (1 a " + tamanho + "):");
+        Scanner sc = new Scanner(System.in);
+        int idVeiculo = sc.nextInt();
+        System.out.print("Digite a quantidade de dias: ");
+        int diasAlugados = sc.nextInt();
+
+        locadora.aluguelVeiculo(diasAlugados, idVeiculo);
+
     }
 
 }
