@@ -29,12 +29,4 @@ public class Locadora {
             }
         }
     }
-
-    public void alugarVeiculo(String modelo){
-        for (Veiculo v:frota){
-            if(v.getModelo().equalsIgnoreCase(modelo)){
-                System.out.println(v.getModelo() + " -> ALUGADO!");
-            }
-        }
-    }
 }
