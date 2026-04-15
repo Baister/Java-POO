@@ -9,8 +9,8 @@ public class Main {
 //        System.out.println(moto1.toString());
 //
         Locadora locadora = new Locadora();
-        locadora.adicionarVeiculo(new Carro("Ferrari", "PORTOFINO", 2026, "ghf-888", 5000, 4));
-        locadora.adicionarVeiculo(new Moto("Harley-Davidson", "FATBOY", 2026, "png-666", 1000, 1600));
+        locadora.adicionarVeiculo(new Carro("Ferrari", "PORTOFINO", 2026, "ghf-888", 900, 4));
+        locadora.adicionarVeiculo(new Moto("Harley-Davidson", "FATBOY", 2026, "png-666", 500, 1600));
         locadora.listarVeiculo();
 
         int tamanho = locadora.getFrota().size();
@@ -21,7 +21,7 @@ public class Main {
         System.out.print("Digite a quantidade de dias: ");
         int diasAlugados = sc.nextInt();
 
-        locadora.aluguelVeiculo(diasAlugados, idVeiculo);
+        locadora.aluguelVeiculo(diasAlugados, idVeiculo-1);
 
     }
 

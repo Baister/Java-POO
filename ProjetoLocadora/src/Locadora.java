@@ -29,7 +29,7 @@ public class Locadora {
             Veiculo v = frota.get(idVeiculo);
             System.out.println("Veiculo encontrado!");
             System.out.println("Para o veiculo: " + v.toString());
-            System.out.printf("Preco base: R$%.2f | Dias alugados: %s| Novo preco: R$%.2f", v.calcularDiaria(), dias, v.calcularDiaria() * dias);
+            System.out.printf("Preço diário: R$%.2f | Dias alugados: %s| Novo preco: R$%.2f", v.calcularDiaria(), dias, v.calcularDiaria() * dias);
 
         }catch (IndexOutOfBoundsException e){
             System.out.println("Veiculo nao encontrado!");
